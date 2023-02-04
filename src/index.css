@@ -1,3 +1,8 @@
+:root {
+  --primary-color: #9DA993;
+  --accent-color: #FEC486;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -10,4 +15,36 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+/* Add a black background color to the top navigation */
+.topnav {
+  background-color: var(--primary-color);
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 5px 16px;
+  text-decoration: none;
+}
+
+#logo
+{
+  font-family: 'Delius Unicase';
+  font-size: 48px ;
+  vertical-align: middle;
+}
+
+.profile .name
+{
+  color: var(--primary-color);
+}
+
+.profile *
+{
+  margin:4px;
 }
