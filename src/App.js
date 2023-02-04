@@ -6,7 +6,7 @@ import { Button, ButtonGroup, Tab, Tabs, Box, Typography, Grid } from '@mui/mate
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import '@fortawesome/free-solid-svg-icons'
 import '@fortawesome/fontawesome-svg-core'
-import { faLeaf } from '@fortawesome/free-solid-svg-icons';
+import { faLeaf, faPen} from '@fortawesome/free-solid-svg-icons';
 import PlantCard from './components/PlantCard'
 
 function LinkTab(props) {
@@ -64,7 +64,7 @@ function App() {
 
   const plantMetadata = [
     {
-      image: "https://www.thespruce.com/thmb/F9mly1jCy5Dc9H0zM-55pIk60VY=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/complete-guide-to-growing-organic-lettuce-2540013-03-ef38a14458964e85a25abf1428aeeed4.jpg",
+      image: "https://gardenerspath.com/wp-content/uploads/2021/07/How-to-Grow-Buttercrunch-Lettuce-Cover.jpg",
       title: "Lettuce"
     },
     {
@@ -96,31 +96,35 @@ function App() {
       title: "Oranges"
     }
   ]
-  
+
   return (
     <div className="App">
-      <header class="topnav">
-        <a id='logo' class="active" href="#home">FERT<FontAwesomeIcon icon={faLeaf} style={{ fontSize: "32px" }}></FontAwesomeIcon> </a>
+      <header className="topnav">
+        <a id='logo' className="active" href="#home">FERT<FontAwesomeIcon icon={faLeaf} style={{ fontSize: "32px" }}></FontAwesomeIcon> </a>
       </header>
 
-      <div class="main" style={{ display: "flex", flexDirection: "row" }}>
-        <div class="profile" style={{ display: "flex", flexDirection: "column", width: "20%" }}>
-          <div style={{ aspectRatio: '1/1', overflow: "cover", width: "100%" }}>
+      <div class="main" style={{display:"flex"}}>
+        <div class="profile" style={{ width: "20%" }}>
+          <div style={{ aspectRatio: 1, overflow: "cover", width: "100%" }}>
             <img src="https://vcdn1-giaitri.vnecdn.net/2020/02/03/269-1580697484-1580702498-9721-1580721326.png?w=680&h=0&q=100&dpr=1&fit=crop&s=3QUgr8q5BGc2tNyRMHyz3A" style={{ boxSizing: "border-box", objectFit: "cover", borderRadius: "50%", width: "100%", height: "100%", padding: "10%" }} />
           </div>
           <div className='profileStatus'>
-            <h1 className='name'>John Doe</h1>
+            <h1 className='name'>Josh Pham</h1>
             <h2>[New Ferter]</h2>
           </div>
-          <h3>Location: 24060<br />
-            Food Planter<br />Price Range: $10-$40</h3>
+          <h3>
+            Location: 24060<br />
+            Food Planter<br />
+            Price Range: $10-$40<br />
+            EDIT<FontAwesomeIcon icon={faPen} style={{ fontSize: "18px" }}></FontAwesomeIcon>
+          </h3>
           <Tabs orientation='vertical' value={value} onChange={handleChange}>
             <LinkTab label="My Plants" />
             <LinkTab label="My Plant Circle" />
           </Tabs>
-
         </div>
-        <TabPanel value={value} index={0}>
+
+        <TabPanel value={value} index={0} style={{width:'80%'}}>
           <div class="feed" >
             <Grid container spacing={2}>
               {
@@ -131,7 +135,7 @@ function App() {
             </Grid>
           </div>
         </TabPanel>
-        <TabPanel value={value} index={1}>
+        <TabPanel value={value} index={1} style={{width: '80%'}}>
           Item Two
         </TabPanel>
 
