@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/react-gh-pages/static/css/main.641b9973.css",
-    "main.js": "/react-gh-pages/static/js/main.e7495e76.js",
-    "static/js/787.abaaa304.chunk.js": "/react-gh-pages/static/js/787.abaaa304.chunk.js",
-    "static/media/logo.svg": "/react-gh-pages/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
-    "index.html": "/react-gh-pages/index.html",
-    "main.641b9973.css.map": "/react-gh-pages/static/css/main.641b9973.css.map",
-    "main.e7495e76.js.map": "/react-gh-pages/static/js/main.e7495e76.js.map",
-    "787.abaaa304.chunk.js.map": "/react-gh-pages/static/js/787.abaaa304.chunk.js.map"
+    "main.css": "/Fert/static/css/main.641b9973.css",
+    "main.js": "/Fert/static/js/main.52832e9c.js",
+    "static/js/787.abaaa304.chunk.js": "/Fert/static/js/787.abaaa304.chunk.js",
+    "static/media/logo.svg": "/Fert/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/Fert/index.html",
+    "main.641b9973.css.map": "/Fert/static/css/main.641b9973.css.map",
+    "main.52832e9c.js.map": "/Fert/static/js/main.52832e9c.js.map",
+    "787.abaaa304.chunk.js.map": "/Fert/static/js/787.abaaa304.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.641b9973.css",
-    "static/js/main.e7495e76.js"
+    "static/js/main.52832e9c.js"
   ]
 }
