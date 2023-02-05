@@ -4,7 +4,7 @@ import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
-import { Modal, Box, Slider } from '@mui/material'
+import { Modal, Box, Slider, Chip, Divider, Badge } from '@mui/material'
 import Typography from '@mui/material/Typography';
 import { IconButton } from '@mui/material';
 import ModalView from './ModalView';
@@ -20,7 +20,7 @@ const zoomOutProperties = {
   infinite: true,
   indicators: true,
   scale: 0.4,
-  arrows: true
+  arrows: false
 };
 
 const buttonStyles = {
@@ -80,6 +80,30 @@ const PlantCard = (props) => {
     }
   ];
 
+  const card = <Card variant="outlined" sx={{ width: 200, height: '100%' }}>
+  <CardMedia
+    sx={{ height: 140 }}
+    image={props.image}
+    title={props.title}
+  />
+  {/* , fontWeight: "bold" */}
+  <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'space-between'}}>
+  <CardContent> 
+    <Typography id="modal-modal-title" variant="h6" component="h2" style={{ fontFamily: "Open Sans"}}> 
+      {props.title}
+    </Typography>
+    {/* {props.firstPlant ? <Chip size='small' label="First plant" variant="outlined" color='secondary'></Chip> : ''} */}
+  
+  </CardContent>
+  
+  <CardActions style={{display: 'flex', justifyContent: "space-between"}}>
+      <IconButton style={buttonStyles} onClick={handleOpen}><AssignmentIcon /></IconButton>
+      <IconButton style={buttonStyles} onClick={handleOpen2}><TimelapseIcon /></IconButton>
+  </CardActions>
+  </div>
+
+
+</Card>
   return (
     <>
       <Modal
@@ -97,7 +121,7 @@ const PlantCard = (props) => {
             <Button onClick={handleClose}>Close</Button>
           </div>
           <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-            Water it 3 times a week.
+          Use a quality seed starting mix and grow under grow lights or in a very sunny, warm window. Plant seeds ¼” deep and keep soil moist. Harden off seedlings in a sheltered outdoor place for one week. Transplant after danger of frost. Seedlings should be planted 30-48” apart in rows 3-4’ apart.
           </Typography>
         </Box>
       </Modal>
@@ -125,23 +149,7 @@ const PlantCard = (props) => {
 
       </Modal>
 
-      <Card sx={{ width: 200 }}>
-        <CardMedia
-          sx={{ height: 140 }}
-          image={props.image}
-          title={props.title}
-        />
-        <CardContent>
-          <Typography id="modal-modal-title" variant="h6" component="h2" style={{ fontFamily: "Open Sans", fontWeight: "bold" }}>
-            {props.title}
-          </Typography>
-        </CardContent>
-        <CardActions style={{display: 'flex', justifyContent: "space-between"}}>
-            <IconButton style={buttonStyles} pill onClick={handleOpen}><AssignmentIcon /></IconButton>
-            <IconButton style={buttonStyles} onClick={handleOpen2}><TimelapseIcon /></IconButton>
-        </CardActions>
-
-      </Card>
+      {card}
 
     </>
   );

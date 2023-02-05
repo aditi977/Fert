@@ -22,15 +22,18 @@ const style = {
 const plantData = [
   {
     image: "https://gardenerspath.com/wp-content/uploads/2021/07/How-to-Grow-Buttercrunch-Lettuce-Cover.jpg",
-  title: "Lettuce"
+    title: "Lettuce",
+    firstPlant: true
   },
   {
     image: "https://www.finedininglovers.com/sites/g/files/xknfdk626/files/styles/article_1200_800_fallback/public/2022-05/tomatoes%C2%A9iStock.jpg?itok=zSwUIa5E",
-  title: "Tomato"
+    title: "Tomato",
+    firstPlant: false
   },
   {
     image: "https://gardenerspath.com/wp-content/uploads/2021/05/Types-of-Cucumbers-FB.jpg",
-    title: "Cucumbers"
+    title: "Cucumbers",
+    firstPlant: false
   },
 ]
 
@@ -52,7 +55,7 @@ const AccountCard = (props) => {
         <Box sx={style}>
           <div style={{display: 'flex', justifyContent: 'space-between', paddingBottom: '10px'}}>
             <div style={{display:'flex', justifyContent: 'space-between'}}>
-            <Avatar src={props.image} sx={{width: 40, height: 40}}/>
+            <Avatar src={props.image} sx={{width: 40, height: 40, marginRight: '10px'}}/>
             <Typography id="modal-modal-title" variant="h6" component="h2">
               {props.title}
             </Typography>
@@ -62,14 +65,14 @@ const AccountCard = (props) => {
             <Grid container spacing={2}>
               {
                 plantData.map((plantInfo) => {
-                  return <Grid item> <PlantCard image={plantInfo.image} title={plantInfo.title} plantName={plantInfo.title.toLowerCase()}></PlantCard> </Grid>
+                  return <Grid item> <PlantCard image={plantInfo.image} title={plantInfo.title} firstPlant={plantInfo.firstPlant} plantName={plantInfo.title.toLowerCase()}></PlantCard> </Grid>
                 })
               }
             </Grid>
         </Box>
       </Modal>
 
-    <Card sx={{ width: 350, maxHeight: 150 }}>
+    <Card variant="outlined"  sx={{ width: 350, maxHeight: 150 }}>
       <CardActionArea onClick={handleOpen}>
       {/* <CardMedia
         sx={{ height: 140 }}
