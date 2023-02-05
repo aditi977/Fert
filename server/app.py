@@ -14,12 +14,18 @@ account_sid = sid
 auth_token = token
 client = Client(account_sid, auth_token)
 
-# message = client.messages \
-#     .create(
-#          body='This is the ship that made the Kessel Run in fourteen parsecs?',
-#          from_='+18443225674',
-#          to='+15407629870'
-#      )
+
+starttime = time.time()
+
+while True:
+    print("tick")
+    message = client.messages \
+        .create(
+             body='Have you watered your plant?',
+             from_='+18443225674',
+             to='+15407629870'
+         )
+    time.sleep(60.0 - ((time.time() - starttime) % 60.0))
     
 @app.route("/")
 def hello():
