@@ -36,7 +36,8 @@ code {
 #logo
 {
   font-family: 'Delius Unicase';
-  font-size: 48px ;
+  font-size: 48px;
+  font-weight: bolder;
   vertical-align: middle;
 }
 
