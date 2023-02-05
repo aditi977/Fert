@@ -2,6 +2,7 @@
   "name": "fert",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://aditi977.github.io/react-gh-pages",
   "dependencies": {
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
@@ -14,6 +15,7 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "buffer": "^6.0.3",
+    "gh-pages": "^5.0.0",
     "react": "^18.2.0",
     "react-bubble-ui-v2": "^0.1.2",
     "react-dom": "^18.2.0",
@@ -24,6 +26,8 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
