@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" style="enable-background:new 0 0 512 512;" xml:space="preserve" class="" viewBox="200 12.55 240 211.68">
+    <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:rgba(255,255,255,0);stop-opacity:1"/>
+      <stop offset="85%" style="stop-color:rgba(255,255,255,1);stop-opacity:1"/>
+    </linearGradient>
+    <style>
+    <![CDATA[
+
+    .leaves-left{
+  fill:#44ce6f;
+}
+
+.leaves-right {
+  fill:#44ce6f;
+}
+
+.plant {
+  fill:#44ce6f;
+}
+    ]]>]
+    </style>
+  </defs>
+<g>
+  <g id="plant">
+	<path d="M285.017,64.165c12.558,12.57,20.334,29.922,20.334,49.097c-38.35,0-69.431-31.081-69.431-69.431   C255.084,43.831,272.447,51.607,285.017,64.165z" data-original="#9AD14B" class="leaves-left" data-boxnum="1"/>
+	<path d="M354.291,135.926c0,27.024-21.916,48.94-48.94,48.94c0-13.512,5.47-25.744,14.333-34.607   C328.535,141.408,340.767,135.926,354.291,135.926z" data-original="#44ce6f" class="leaves-right" data-boxnum="1"/>
+	<path d="M305.352,113.262c0-27.809,11.266-52.985,29.499-71.206c18.221-18.221,43.397-29.499,71.206-29.499   C406.057,68.174,360.969,113.262,305.352,113.262z" data-original="#44ce6f" class="leaves-right" data-boxnum="1"/>
+	<rect id="stem" x="296.295" y="104.207" width="18.112" height="118.455" data-original="#44ce6f" class="plant" data-boxnum="1"/>
+    <rect x="200" y="104.207" width="240" height="120" fill="url(#grad1)"/>
+    
+</g></g> </svg>
